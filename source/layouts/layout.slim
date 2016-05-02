@@ -41,9 +41,12 @@ html itemscope='' itemtype='http://schema.org/WebPage' lang=data.site.language
     = favicon_tag 'images/favicon.ico', rel: 'apple-touch-icon', type: 'image/png'
 
   body class=page_classes
-    main role='main'
+    main.small-8.columns.row role='main'
+      div = image_tag 'elixir-jobs-logo.png', alt: 'Elixir.jobs'
       = yield
 
     / Footer
-    footer
-      = link_to 'Sitemap', 'sitemap'
+    footer.small-8.columns.row
+      hr
+      a href='mailto:fei@secretsaucehq.com' Get in touch
+      /* = link_to 'Sitemap', 'sitemap' */
